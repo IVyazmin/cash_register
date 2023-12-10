@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+</head>
+
+<body>
+    <h3>ООО Компания К</h3>
+    <h3>Добро пожаловать</h3>
+    <h3>ККМ 00075411 №3969</h3>
+    <h3>ИНН 108774694240</h3>
+    {{ cur_time }}
+    <table>
+      <tr>
+        <th>Наименовани</th>
+        <th>Количество</th>
+        <th>Сумма</th>
+      </tr>
+      {% for item in items %}
+      <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.num }}</td>
+        <td>{{ item.sum }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <h2>Итог {{ total_sum }}</h2>
+    <h3>Наличными {{ total_sum }}</h3>
+</body>
+</html>
